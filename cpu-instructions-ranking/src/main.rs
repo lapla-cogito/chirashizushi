@@ -94,7 +94,6 @@ fn process_directory(dir_path: &str, instruction_count_map: &mut HashMap<String,
     for entry in dir_entries {
         if let Ok(entry) = entry {
             let file_path = entry.path();
-            cnt += 1;
             if file_path.is_file() {
                 process_file(file_path.to_str().unwrap(), instruction_count_map);
             } else if fs::metadata(file_path.clone()).unwrap().is_dir()

@@ -41,14 +41,16 @@ $ cargo run sample
 
 This will make like following output:
 
-> Function: _start calls <__libc_start_main@GLIBC_2.34>
-> Function: __do_global_dtors_aux calls <__cxa_finalize@plt>
-> Function: __do_global_dtors_aux calls <deregister_tm_clones>
-> Function: fuga calls <hoge>
-> Function: fuga calls <printf@plt>
-> Function: main calls <fuga>
-> Function: main calls <hoge>
-> Function: main calls <printf@plt>
+```
+Function: _start calls <__libc_start_main@GLIBC_2.34>
+Function: __do_global_dtors_aux calls <__cxa_finalize@plt>
+Function: __do_global_dtors_aux calls <deregister_tm_clones>
+Function: fuga calls <hoge>
+Function: fuga calls <printf@plt>
+Function: main calls <fuga>
+Function: main calls <hoge>
+Function: main calls <printf@plt>
+```
 
 On the other hand, you can create Mermaid format by running:
 
